@@ -10,23 +10,48 @@ For general information about developing packages, see the Dart guide for
 and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
+# Adaptive Text Resizer
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A Flutter package that dynamically adjusts text size based on screen width, ensuring readability across all devices. This package helps optimize UI responsiveness and improve accessibility.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+✅ Automatically scales text size based on screen width. ✅ Allows customizable minimum and maximum font sizes. ✅ Works with any text widget in Flutter. ✅ Lightweight and easy to integrate. ✅ Improves accessibility for different screen sizes.
 
-## Getting started
+## Installation
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To use Adaptive Text Resizer, follow these steps:
+
+## Add the dependency
+
+Include it in your pubspec.yaml file:
+dependencies:
+  adaptive_text_resizer: ^1.0.0
+Then run:
+  flutter pub get
+
+## Import the package
+
+import 'package:adaptive_text_resizer/adaptive_text_resizer.dart';
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Basic Example
+AdaptiveText(
+  text: "Adaptive Text Example",
+  style: TextStyle(fontWeight: FontWeight.bold),
+  minSize: 14,
+  maxSize: 28,
+);
+
+Using with Theme Styling
+
+AdaptiveText(
+  text: "Dynamic Resizing",
+  style: Theme.of(context).textTheme.headline5,
+  minSize: 16,
+  maxSize: 32,
+);
 
 ```dart
 const like = 'sample';
@@ -34,6 +59,8 @@ const like = 'sample';
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+License: MIT License - Free to use and modify..
+
+## Author
+
+Created by Mathan Thiruvenkadam 🚀
